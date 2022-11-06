@@ -8,37 +8,28 @@
     <span class="cmd refresh pull-right cursor" data-cmd_id="#refresh_id#">
       <i class="fas fa-sync"></i>
     </span>
-    <span class="reportModeVisible">#name_display# <span class="object_name">#object_name#</span></span>
     <a href="#eqLink#" class="reportModeHidden">#name_display# <span class="object_name">#object_name#</span></a>
-<!--      <div class="cmdName" data-cmd_id="#lastpres_id#">
-        <span title="#lastpres_collectDate#">#lastpres#</span>
-      </div>
--->
   </center>
 
   <div style="width:220px; height:221px; #style#; background-image: url('./plugins/qivivo/core/img/thermostatEmpty.png');background-repeat:no-repeat">
     <center>
-      <div style="height:45px;width:100%" ></div>
-      <div style="width:100%;margin-left:-47px">
-        <div class="cmd-widget" data-type="action" style="min-width: 20px;margin-bottom:5px;width:24px!important;margin-right:12px">
+        <div class="cmd-widget" data-type="action" style="position:absolute; top:70px; left:25px;min-width: 20px;margin-bottom:5px;width:24px!important;margin-right:12px">
         	<a class="cmd btn qivivo_temperature_order_down" style="background-color:transparent !important; background-image:none !important" data-cmd_id="#set_plus_one_id#"><img src="/plugins/qivivo/core/img/icon_down_light.png" title="-1°C" width="24px"></a>
         </div>
-        <div class="cmd cmd-widget #temperature_order_history#" data-type="info" data-cmd_id="#temperature_order_id#" style="min-width: 15px;">
+        <div class="cmd cmd-widget #temperature_order_history#" data-type="info" data-cmd_id="#temperature_order_id#" style="position:absolute; top:68px; left:62px;min-width: 15px;">
             <strong class="state" title="#temperature_order_collectDate#" style="position:relative; top:12px;vertical-align:middle;font-size:1.5em; color:black!important">#temperature_order# °C</strong>
         </div>
-	    <div class="cmd-widget" data-type="action" style="min-width: 15px;margin-bottom:5px;width:24px!important">
+	    <div class="cmd-widget" data-type="action" style="position:absolute; top:70px; left:120px;min-width: 15px;margin-bottom:5px;width:24px!important">
     	    <a class="cmd btn qivivo_temperature_order_up" style="background-color:transparent !important; background-image:none !important" data-cmd_id="#set_minus_one_id#"><img src="/plugins/qivivo/core/img/icon_up_light.png" title="+1°C" width="24px"></a>
   		</div>
-      </div>
-      <hr style="height:7px; visibility:hidden; padding:0; margin:0">
-      <div class="cmd cmd-widget reportModeHidden" data-type="action" data-subtype="select" data-cmd_id="#set_program_id#" data-version="#version#" data-eqLogic_id="#id#" title="#program_collectDate#" style="width:90%!important;height:25px;">
+      <div class="cmd cmd-widget reportModeHidden" data-type="action" data-subtype="select" data-cmd_id="#set_program_id#" data-version="#version#" data-eqLogic_id="#id#" title="#program_collectDate#" style="position:absolute; top:110px; left:0px;width:100%!important;height:25px;">
         <div class="content-xs" style="display: flex;">
           <i class="divers-today1" style="font-size:20px;padding-top:1px;padding-left:7px;width: 20px;margin-left:15px; color:black!important"></i>
-          <select class="selectCmd" data-l2key="graphColor" style="width:calc(100% - 80px) !important; color:black!important">#set_program_listValue#</select>
+          <select class="selectCmd" data-l2key="graphColor" style="width:calc(100% - 60px) !important; color:black!important">#set_program_listValue#</select>
         </div>
       </div>
-        <div class="cmd-widget" data-type="action" style="min-width: 15px;margin-bottom:5px;width:24px!important;position:absolute;top:102px;left:139px;">
-          <a class="cmd btn qivivo_temperature_order_cancel" style=" background-color:transparent !important; background-image:none !important;opacity: #cancel_opacity#;" data-cmd_id="#cancel_id#"><img src="/plugins/qivivo/core/img/icon_cross_light.png" title="Cancel" width="24px"></a>
+        <div class="cmd-widget" data-type="action" style="min-width: 15px;margin-bottom:5px;width:24px!important;position:absolute;top:125px;left:139px;">
+          <a class="cmd btn qivivo_temperature_order_cancel" style=" background-color:transparent !important; background-image:none !important;opacity: #cancel_opacity#;" data-cmd_id="#cancel_id#"><img src="/plugins/qivivo/core/img/icon_cross_light.png" title="Cancel" width="24px">			</a>
         </div>
       
       

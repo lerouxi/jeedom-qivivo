@@ -1,117 +1,113 @@
-<div class="eqLogic eqLogic-widget #eqLogic_class# #class#"
-      style="position: relative; min-height:150px !important; #style#"
+<div class="eqLogic eqLogic-widget allowResize allowReorderCmd allowLayout #eqLogic_class# #class#"
+      style="position: relative; width:#width#; height:#height#; #style#"
       data-eqLogic_id="#id#" data-eqLogic_uid="#uid#" data-version="#version#" data-category="#category#" data-translate-category="#translate_category#">
-  <span class="cmd refresh pull-right cursor" data-cmd_id="#refresh_id#">
-    <i class="fas fa-sync"></i>
-  </span>
-  <center>
-    <span class="widget-name">
-      <span class="warning" title="#alert_name#">
-        <i class='#alert_icon#'></i>
-      </span>
-      <span>#name_display# <span class="object_name">#object_name#</span></span><br/>
+  <center class="widget-name">
+    <span class="warning" title="#alert_name#">
+      <i class='#alert_icon#'></i>
     </span>
-  </center>
-  <center>
-    <div>
-      <hr style="height:5px; visibility:hidden; padding:0; margin:0">
-      <a href="#thermoOrder#id#" data-rel="popup" class="cmd btn qivivo_temperature_order_down cursor" data-cmd_id="#set_plus_one_id#"><img src="/plugins/qivivo/core/img/icon_down_dark.png" title="-1°C" width="26px" style="vertical-align:middle;"></a>
-      <strong class="cmd state #temperature_order_history# #history#" data-type="info" data-cmd_id="#temperature_order_id#" title="#temperature_order_collectDate#" style="vertical-align:middle;font-size:1.5em!important">#temperature_order#</strong> °C
-      <a href="#thermoOrder#id#" data-rel="popup" class="cmd btn qivivo_temperature_order_up cursor" data-cmd_id="#set_minus_one_id#"><img src="/plugins/qivivo/core/img/icon_up_dark.png" title="+1°C" width="26px" style="vertical-align:middle;"></a>
-      <a class="cmd btn qivivo_temperature_order_cancel cursor" data-cmd_id="#cancel_id#" style="margin-left:5px;opacity: #cancel_opacity#;"><img src="/plugins/qivivo/core/img/icon_cross_dark.png" title="Cancel" width="26px" style="vertical-align:middle;"></a>
-      <hr style="height:5px; visibility:hidden; padding:0; margin:0">
-    </div>
-
-    <span class="cmd cmd-widget" data-type="action" data-subtype="select" data-cmd_id="#set_program_id#" data-version="#version#" data-eqLogic_id="#id#">
-        <i class="divers-today1" style="font-size:20px;padding-top: 18px;padding-left: 5px;float: left;"></i>
-        <select>#set_program_listValue#</select>
+    <span class="cmd refresh pull-right cursor" data-cmd_id="#refresh_id#">
+      <i class="fas fa-sync"></i>
     </span>
-
-    <div class="cmd cmd-widget #temperature_history#" data-type="info" data-cmd_id="#temperature_id#" title="#temperature_collectDate#" style="line-height:16px;display:block;">
-      <div class="cmdName">#temperature_name#  <strong class="state">#temperature#</strong> °C</div>
-    </div>
-
-    <div class="cmd cmd-widget #humidity_history#" data-type="info" data-cmd_id="#humidity_id#" title="#humidity_collectDate#" style="line-height:16px;display:block;">
-      <div class="cmdName">#humidity_name#  <strong class="state">#humidity#</strong> %</div>
-    </div>
-
-    <div>
-      <img style="position:absolute; right:0px; bottom:6px;" src="#imgheating#" title="Chauffage" width="42px">
-    </div>
-
-    <div data-cmd_id="#lastpres_id#">
-    </br>
-      <i class="far fa-smile"></i>
-      #lastpres#
-    </div>
+    <a href="#eqLink#" class="reportModeHidden">#name_display# <span class="object_name">#object_name#</span></a>
   </center>
 
-  <div data-enhance="false" data-role="popup" id="thermoOrder#id#" style="padding: 10px; background-color: rgb(var(--eq-bg-color))!important;">
-    #order_name# <input data-role="none" type="number" class="inputOrder" size="3" min="0" max="40" step="0.5" style="width: 50px;" value="#temperature_order#"> °C
-    <br><br>
-    #during_name#
-      <input data-role="none" type="number" class="inputHour" size="2" min="0" max="72" step="1" value="2" style="width: 50px;"> h
-      <input data-role="none" type="number" class="inputMinute" size="2" min="0" max="60" step="1" value="0" style="width: 50px;"> min<br>
-    <br>
-    <center><a class="ui-btn ui-mini ui-btn-inline bt_thermoOrderCancel">Cancel</a> <a class="ui-btn ui-mini ui-btn-inline bt_thermoOrderOk">OK</a></center>
+  <div style="width:220px; height:221px; #style#; background-image: url('./plugins/qivivo/core/img/thermostatEmpty.png');background-repeat:no-repeat">
+    <center>
+        <div class="cmd-widget" data-type="action" style="position:absolute; top:80px; left:30px;min-width: 20px;margin-bottom:5px;width:24px!important;margin-right:12px">
+        	<a class="cmd btn qivivo_temperature_order_down" style="background-color:transparent !important; background-image:none !important" data-cmd_id="#set_plus_one_id#"><img src="/plugins/qivivo/core/img/icon_down_light.png" title="-1°C" width="24px"></a>
+        </div>
+        <div class="cmd cmd-widget #temperature_order_history#" data-type="info" data-cmd_id="#temperature_order_id#" style="position:absolute; top:70px; left:70px;min-width: 15px;">
+            <strong class="state" title="#temperature_order_collectDate#" style="position:relative; top:12px;vertical-align:middle;font-size:2em; color:black!important">#temperature_order# °C</strong>
+        </div>
+	    <div class="cmd-widget" data-type="action" style="position:absolute; top:80px; left:130px;min-width: 15px;margin-bottom:5px;width:24px!important">
+    	    <a class="cmd btn qivivo_temperature_order_up" style="background-color:transparent !important; background-image:none !important" data-cmd_id="#set_minus_one_id#"><img src="/plugins/qivivo/core/img/icon_up_light.png" title="+1°C" width="24px"></a>
+  		</div>
+      <div class="cmd cmd-widget reportModeHidden" data-type="action" data-subtype="select" data-cmd_id="#set_program_id#" data-version="#version#" data-eqLogic_id="#id#" title="#program_collectDate#" style="position:absolute; top:95px; left:30px;width:100%!important;height:25px;">
+        <div class="content-xs" style="display: flex;">
+          <i class="divers-today1" style="position:absolute; top:18px; left:-30px;font-size:20px;padding-top:1px;padding-left:7px;width: 20px;margin-left:15px; color:black!important"></i>
+          <select class="selectCmd" data-l2key="graphColor" style="width:calc(100% - 60px) !important; color:black!important">#set_program_listValue#</select>
+        </div>
+      </div>
+        <div class="cmd-widget" data-type="action" style="min-width: 15px;margin-bottom:5px;width:24px!important;position:absolute;top:125px;left:139px;">
+          <a class="cmd btn qivivo_temperature_order_cancel" style=" background-color:transparent !important; background-image:none !important;opacity: #cancel_opacity#;" data-cmd_id="#cancel_id#"><img src="/plugins/qivivo/core/img/icon_cross_light.png" title="Cancel" width="24px">			</a>
+        </div>
+      
+      
+      <div class="cmd cmd-widget #temperature_history#" data-type="info" data-cmd_id="#temperature_id#" title="#temperature_collectDate#" style="line-height:15px;width:auto!important;position:absolute;top:152px;left:20px">
+        <div class="cmdName" style="color:black">Temp.  <strong class="state" style="color:black!important">#temperature#</strong> °C</div>
+      </div>
+
+      <div class="cmd cmd-widget #humidity_history#" data-type="info" data-cmd_id="#humidity_id#" title="#humidity_collectDate#" style="line-height:15px;;width:auto!important;position:absolute;top:177px;left:36px">
+        <div class="cmdName" style="color:black">#humidity_name# <strong class="state" style="color:black!important">#humidity#</strong> %</div>
+      </div>
+
+      <div class="cmd cmd-widget #heating_history#" data-type="info" data-cmd_id="#heating_id#" style="position:absolute; left:105px; top:137px">
+        <img class="#heating_history#" data-cmd_id="#heating_id#" src="#imgheating#" title="#heating_collectDate#" width="58px">
+      </div>
+
+
+    </center>
+
+
+  </div>
+
+  <div class="form-group thermoOrder shadowed" style="display:none; position:absolute; top:0; left:5px; right:5px; padding:10px; background-color: rgb(var(--eq-bg-color));">
+    <center>
+      <span>#order_name# </span> <input type="number" class="form-control inputOrder" size="3" min="0" max="40" step="0.5"> °C<br>
+      <span>#during_name# </span>
+       <input type="number" class="form-control inputHour" size="2" min="0" max="72" step="1" value="2"> h
+       <input type="number" class="form-control inputMinute" size="2" min="0" max="60" step="1" value="0"> min<br>
+      <br>
+      <a class="btn btn-xs bt_thermoOrderCancel">Cancel</a> <a class="btn btn-xs bt_thermoOrderOk">OK</a>
+    </center>
   </div>
   #divGraphInfo#
   <script type="text/javascript">
-    //change theme event handler for images:
-    $('body').on('changeThemeEvent', function (event, theme) {
-      var eqlogic = $('.eqLogic[data-eqLogic_uid=#uid#]')
-      if (theme == 'Light') {
-        eqlogic.find('.qivivo_temperature_order_down > img').attr('src', '/plugins/qivivo/core/img/icon_down_light.png')
-        eqlogic.find('.qivivo_temperature_order_up > img').attr('src', '/plugins/qivivo/core/img/icon_up_light.png')
-        eqlogic.find('.qivivo_temperature_order_cancel > img').attr('src', '/plugins/qivivo/core/img/icon_cross_light.png')
-      } else {
-        eqlogic.find('.qivivo_temperature_order_down > img').attr('src', '/plugins/qivivo/core/img/icon_down_dark.png')
-        eqlogic.find('.qivivo_temperature_order_up > img').attr('src', '/plugins/qivivo/core/img/icon_up_dark.png')
-        eqlogic.find('.qivivo_temperature_order_cancel > img').attr('src', '/plugins/qivivo/core/img/icon_cross_dark.png')
-      }
+    $('div[data-eqLogic_id="#id#"] .thermoOrder input[type="number"]').spinner({
+      icons: { down: "ui-icon-triangle-1-s", up: "ui-icon-triangle-1-n"}
     })
-    //set icons to light:
-    if ($('body')[0].hasAttribute('data-theme')) {
-      if ($('body').attr('data-theme').endsWith('Light')) {
-        var eqlogic = $('.eqLogic[data-eqLogic_uid=#uid#]')
-        eqlogic.find('.qivivo_temperature_order_down > img').attr('src', '/plugins/qivivo/core/img/icon_down_light.png')
-        eqlogic.find('.qivivo_temperature_order_up > img').attr('src', '/plugins/qivivo/core/img/icon_up_light.png')
-        eqlogic.find('.qivivo_temperature_order_cancel > img').attr('src', '/plugins/qivivo/core/img/icon_cross_light.png')
-      }
-    }
+
+    $('div[data-eqLogic_id="#id#"] select option').filter(function() { return !this.value || $.trim(this.value).length == 0;}).remove()
 
     $('.eqLogic[data-eqLogic_uid=#uid#] .refresh').on('click', function () {
-      jeedom.cmd.execute({id: '#refresh_id#'});
+      jeedom.cmd.execute({id: '#refresh_id#'})
+    })
+
+    $('.eqLogic[data-eqLogic_uid=#uid#] .qivivo_temperature_order_up').on('click', function () {
+      var temp = $("div[data-cmd_id='#temperature_order_id#'] .state").html()
+      var dialog = $('div[data-eqLogic_id="#id#"]').find('.thermoOrder')
+      dialog.find('.inputOrder').val(parseFloat(temp) + 1)
+      dialog.show()
+    })
+
+    $('.eqLogic[data-eqLogic_uid=#uid#] .qivivo_temperature_order_down').on('click', function () {
+      var temp = $("div[data-cmd_id='#temperature_order_id#'] .state").html()
+      var dialog = $('div[data-eqLogic_id="#id#"]').find('.thermoOrder')
+      dialog.find('.inputOrder').val(parseFloat(temp) - 1)
+      dialog.show()
     })
 
     $('.eqLogic[data-eqLogic_uid=#uid#] .qivivo_temperature_order_cancel').on('click', function () {
       jeedom.cmd.execute({id: '#cancel_id#'})
     })
 
-    $('.eqLogic[data-eqLogic_uid=#uid#] .qivivo_temperature_order_up').on('click', function () {
-      var temp = $("[data-cmd_id='#temperature_order_id#']").html()
-      $('#thermoOrder#id#').find('.inputOrder').val(parseFloat(temp) + 1)
+    $('.eqLogic[data-eqLogic_uid=#uid#] .bt_thermoOrderCancel').on('click', function () {
+      $('div[data-eqLogic_id="#id#"]').find('.thermoOrder').hide()
     })
-
-    $('.eqLogic[data-eqLogic_uid=#uid#] .qivivo_temperature_order_down').on('click', function () {
-      var temp = $("[data-cmd_id='#temperature_order_id#']").html()
-      $('#thermoOrder#id#').find('.inputOrder').val(parseFloat(temp) - 1)
-    })
-    $('#thermoOrder#id# .bt_thermoOrderCancel').on('click', function () {
-      $('#thermoOrder#id#').popup('close')
-    })
-    $('#thermoOrder#id# .bt_thermoOrderOk').on('click', function () {
-      var dialog = $('#thermoOrder#id#')
+    $('.eqLogic[data-eqLogic_uid=#uid#] .bt_thermoOrderOk').on('click', function () {
+      var dialog = $('div[data-eqLogic_id="#id#"]').find('.thermoOrder')
       var order = dialog.find('.inputOrder').val()
       var hours = dialog.find('.inputHour').val()
       var minutes = dialog.find('.inputMinute').val()
       minutes = parseInt(minutes) + (parseInt(hours)*60)
+
       jeedom.cmd.execute({id: '#set_plus_one_id#', value: {order, minutes}})
-      $('#thermoOrder#id#').popup('close')
+
+      $('div[data-eqLogic_id="#id#"]').find('.thermoOrder').hide()
     })
 
     $(".cmd[data-cmd_id=#set_program_id#] select").on('change', function () {
-      jeedom.cmd.execute({id: '#set_program_id#', value: {select: $(this).value()}});
+      jeedom.cmd.execute({id: '#set_program_id#', value: {select: $(this).value()}})
     })
   </script>
 </div>
